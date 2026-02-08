@@ -17,11 +17,11 @@ Use this skill to create deterministic book packages that backend and replay sys
 - Produce `books_<mode>.jsonl` (or `.jsonl.zst`) with stable `id` fields.
 - Ensure each record has required fields (`id`, `events`, `payoutMultiplier`).
 - Keep generator seeds/config versions in run logs.
-
-3. Generate weight lookups.
-- Build `lookUpTable_<mode>_0.csv` with book ID and weight columns.
-- Keep weights positive and aligned to existing book IDs.
-- Normalize total weight policy per product requirements.
+21→ 3. Generate weight lookups.
+22→ - Build `lookUpTable_<mode>_0.csv` with simulation ID, weight, and payout columns.
+23→ - Column structure: `id` (simulation number), `weight` (probability), `payoutMultiplier`.
+24→ - Keep weights positive and aligned to existing book IDs.
+25→ - Normalize total weight policy per product requirements.
 
 4. Assemble `index.json`.
 - Include `modes[]` with `name`, `cost`, `events`, and `weights`.
