@@ -1,0 +1,4 @@
+interface:
+  display_name: "Low Latency Systems"
+  short_description: "Design and validate low-latency service paths"
+  default_prompt: "Use $low-latency-systems to identify latency bottlenecks, optimize request paths, and validate p50/p95/p99 regression gates with reproducible evidence."

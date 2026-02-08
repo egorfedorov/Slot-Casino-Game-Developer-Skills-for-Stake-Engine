@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auto Balancer"
+  short_description: "Auto-balance game metrics with validated guardrails"
+  default_prompt: "Use $auto-balancer to tune configurable game parameters toward target metrics and validate each iteration against strict pass/fail constraints."

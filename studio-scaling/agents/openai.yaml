@@ -1,0 +1,4 @@
+interface:
+  display_name: "Studio Scaling"
+  short_description: "Scale game studio workflows and delivery"
+  default_prompt: "Use $studio-scaling to design scalable studio workflows, team handoffs, and release throughput controls."

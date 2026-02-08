@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slot UI Studio"
+  short_description: "Build cohesive slot UI production systems"
+  default_prompt: "Use $slot-ui-studio to structure slot UI systems, shared components, and production-ready UX delivery workflows."

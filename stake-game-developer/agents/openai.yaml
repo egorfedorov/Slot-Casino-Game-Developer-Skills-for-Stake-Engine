@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stake Game Developer"
+  short_description: "Build and validate Stake games end-to-end"
+  default_prompt: "Use $stake-game-developer to design, validate, and ship a Stake game workflow."

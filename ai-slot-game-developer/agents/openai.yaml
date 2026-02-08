@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Slot Game Developer"
+  short_description: "Build and validate AI-driven slot game runtime"
+  default_prompt: "Use $ai-slot-game-developer to implement or audit AI-driven slot systems, mode runtime contracts, fallback behavior, and release validation gates."

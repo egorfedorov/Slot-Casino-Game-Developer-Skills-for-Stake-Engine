@@ -1,0 +1,4 @@
+interface:
+  display_name: "Senior Game Math Engineer"
+  short_description: "Design and validate slot math for RTP targets"
+  default_prompt: "Use $senior-game-math-engineer to design or audit slot math with RTP, volatility, and simulation-backed sign-off evidence."

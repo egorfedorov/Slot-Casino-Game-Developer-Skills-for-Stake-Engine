@@ -1,0 +1,4 @@
+interface:
+  display_name: "WASM Integration"
+  short_description: "Integrate and validate WebAssembly app pipelines"
+  default_prompt: "Use $wasm-integration to build, wire, and validate WebAssembly modules, JS bindings, and runtime loading behavior for production readiness."

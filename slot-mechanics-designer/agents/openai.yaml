@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slot Mechanics Designer"
+  short_description: "Design and review slot feature mechanics specs"
+  default_prompt: "Use $slot-mechanics-designer to design or audit slot mechanics, trigger logic, feature sequencing, and implementation-ready behavior specs."

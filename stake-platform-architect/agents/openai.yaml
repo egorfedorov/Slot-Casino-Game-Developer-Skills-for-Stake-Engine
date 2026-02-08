@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stake Platform Architect"
+  short_description: "Architect Stake platform integration layers"
+  default_prompt: "Use $stake-platform-architect to design Stake platform architecture, contract boundaries, and integration readiness checks."

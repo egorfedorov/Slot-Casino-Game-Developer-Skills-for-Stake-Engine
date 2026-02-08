@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Math Director"
+  short_description: "Direct game math strategy and validation"
+  default_prompt: "Use $game-math-director to direct game-math strategy, targets, validation plans, and release sign-off evidence."

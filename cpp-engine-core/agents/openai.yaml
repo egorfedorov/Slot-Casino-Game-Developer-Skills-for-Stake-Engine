@@ -1,0 +1,4 @@
+interface:
+  display_name: "C++ Engine Core"
+  short_description: "Develop and harden C++ engine core modules"
+  default_prompt: "Use $cpp-engine-core to implement and harden C++ engine core systems with correctness and performance gates."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX Retention Designer"
+  short_description: "Design retention-focused game UX systems"
+  default_prompt: "Use $ux-retention-designer to design retention-oriented UX loops, friction controls, and measurable engagement touchpoints."

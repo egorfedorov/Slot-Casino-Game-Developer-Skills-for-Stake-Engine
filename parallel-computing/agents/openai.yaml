@@ -1,0 +1,4 @@
+interface:
+  display_name: "Parallel Computing"
+  short_description: "Design and tune scalable parallel workloads"
+  default_prompt: "Use $parallel-computing to design parallel execution strategies, evaluate scaling efficiency, and detect thread-level regressions with benchmark evidence."

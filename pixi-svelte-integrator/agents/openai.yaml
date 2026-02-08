@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pixi Svelte Integrator"
+  short_description: "Integrate PixiJS rendering into Svelte apps"
+  default_prompt: "Use $pixi-svelte-integrator to design or audit PixiJS + Svelte integration, including app lifecycle, resize behavior, event flow, and teardown safety."

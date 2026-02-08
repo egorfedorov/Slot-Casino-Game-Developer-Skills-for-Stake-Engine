@@ -1,0 +1,4 @@
+interface:
+  display_name: "Telemetry Analytics"
+  short_description: "Design telemetry pipelines and KPI analytics"
+  default_prompt: "Use $telemetry-analytics to define telemetry schemas, analytics pipelines, and KPI validation workflows."

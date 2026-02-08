@@ -1,0 +1,4 @@
+interface:
+  display_name: "RTP Optimizer"
+  short_description: "Tune and validate game RTP against target bands"
+  default_prompt: "Use $rtp-optimizer to design or audit RTP tuning plans, simulate convergence, and deliver sign-off metrics with pass/fail gates."

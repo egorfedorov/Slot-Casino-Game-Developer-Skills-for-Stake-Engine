@@ -1,0 +1,4 @@
+interface:
+  display_name: "RNG Crypto Specialist"
+  short_description: "Build and audit provably fair RNG systems"
+  default_prompt: "Use $rng-crypto-specialist to design or audit commit-reveal RNG, seed lifecycle, nonce handling, and fairness verification evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Generator"
+  short_description: "Generate and validate weighted game book sets"
+  default_prompt: "Use $book-generator to define mode book requirements, generate weighted books/index metadata, and validate release readiness with deterministic checks."

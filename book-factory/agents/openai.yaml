@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Factory"
+  short_description: "Generate and validate high-volume book assets"
+  default_prompt: "Use $book-factory to produce large-volume book assets and validate packaging, indexing, and integrity gates."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Event Animation Designer"
+  short_description: "Design and validate event-driven animation flows"
+  default_prompt: "Use $event-animation-designer to design or audit event-driven animation timelines, trigger sequencing, and transition safety with deterministic validation checks."

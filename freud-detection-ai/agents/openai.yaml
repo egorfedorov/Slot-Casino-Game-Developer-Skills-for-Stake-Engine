@@ -1,0 +1,4 @@
+interface:
+  display_name: "Freud Detection AI"
+  short_description: "Detect anomalous patterns in game data"
+  default_prompt: "Use $freud-detection-ai to define anomaly-detection workflows, scoring rules, and investigation gating for game data."

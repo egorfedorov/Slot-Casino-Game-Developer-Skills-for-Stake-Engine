@@ -1,0 +1,26 @@
+{
+  "restrictedTerms": [
+    { "phrase": "bet", "replacement": "play", "socialOnly": true },
+    { "phrase": "bets", "replacement": "plays", "socialOnly": true },
+    { "phrase": "total bet", "replacement": "total play", "socialOnly": true },
+    { "phrase": "stake", "replacement": "play amount", "socialOnly": true },
+    { "phrase": "buy", "replacement": "play", "socialOnly": true },
+    { "phrase": "bonus buy", "replacement": "bonus / feature", "socialOnly": true },
+    { "phrase": "cash", "replacement": "coins", "socialOnly": true },
+    { "phrase": "money", "replacement": "coins", "socialOnly": true },
+    { "phrase": "gamble", "replacement": "play", "socialOnly": true },
+    { "phrase": "wager", "replacement": "play", "socialOnly": true },
+    { "phrase": "deposit", "replacement": "get coins", "socialOnly": true },
+    { "phrase": "withdraw", "replacement": "redeem", "socialOnly": true }
+  ],
+  "requiredPhrases": [
+    {
+      "phrase": "rgs_url",
+      "description": "Game must use rgs_url query parameter for server routing."
+    },
+    {
+      "phrase": "Malfunction voids all pays and plays.",
+      "description": "Required game disclaimer text must be present."
+    }
+  ]
+}

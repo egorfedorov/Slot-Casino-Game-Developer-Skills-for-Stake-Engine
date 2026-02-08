@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Slot UX Designer"
+  short_description: "Design and validate slot UI/UX interaction flows"
+  default_prompt: "Use $ui-slot-ux-designer to design or audit slot-game UX flows, control hierarchy, state transitions, and mobile/desktop interaction quality gates."

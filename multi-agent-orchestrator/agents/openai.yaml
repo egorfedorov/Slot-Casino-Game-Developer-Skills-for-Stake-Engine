@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi-Agent Orchestrator"
+  short_description: "Coordinate multi-agent execution pipelines"
+  default_prompt: "Use $multi-agent-orchestrator to plan, sequence, and monitor multi-agent workflows with explicit dependencies and delivery gates."

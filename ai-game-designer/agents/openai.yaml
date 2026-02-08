@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Game Designer"
+  short_description: "Design and validate AI-driven game design specs"
+  default_prompt: "Use $ai-game-designer to create or audit game design specs, progression loops, economy constraints, and implementation-ready feature definitions."

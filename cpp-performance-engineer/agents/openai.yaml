@@ -1,0 +1,4 @@
+interface:
+  display_name: "C++ Performance Engineer"
+  short_description: "Profile and optimize C++ performance bottlenecks"
+  default_prompt: "Use $cpp-performance-engineer to profile C++ hotspots, analyze benchmark regressions, and deliver optimization plans with measurable impact."

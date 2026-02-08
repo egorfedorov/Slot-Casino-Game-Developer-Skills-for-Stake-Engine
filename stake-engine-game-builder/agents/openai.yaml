@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stake Engine Game Builder"
+  short_description: "Build Stake Engine games with RGS + replay compliance"
+  default_prompt: "Implement or audit a game against Stake Engine docs with correct RGS flow, replay mode, and frontend checklist."

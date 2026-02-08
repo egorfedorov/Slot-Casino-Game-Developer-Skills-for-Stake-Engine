@@ -1,0 +1,4 @@
+interface:
+  display_name: "Provider Integration"
+  short_description: "Integrate providers with stable contracts"
+  default_prompt: "Use $provider-integration to implement and audit provider contracts, adapter layers, and integration reliability gates."
