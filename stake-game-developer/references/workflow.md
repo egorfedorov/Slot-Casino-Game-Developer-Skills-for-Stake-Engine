@@ -6,23 +6,25 @@ Ship a Stake game update that is math-sound, RGS-contract-safe, frontend-correct
 
 ## Sequence
 
-1. Capture brief and constraints
-- Game identity, core mechanics, and mode list.
-- RTP targets, max win, and volatility intent.
-- Any jurisdiction-specific launch requirements.
+1. **Define Game Structure**
+   - Create `config.yml` with core math rules (RTP, Symbols, Paylines).
+   - Define States and Transitions (Idle, Spinning, Resolving).
+   - Reference: `https://stake-engine.com/docs/math/high-level-structure/game-structure`
 
-2. Validate books and index metadata
-- Run `scripts/validate-books-index.mjs` against generated `index.json`.
-- Block on missing referenced files, malformed mode metadata, or invalid RTP ranges.
+2. **Generate Math Source Files**
+   - Create `events.jsonl` (or per-mode books) following the event schema.
+   - Validate against `config.yml` constraints.
+   - Reference: `https://stake-engine.com/docs/math/source-files/events`
 
-3. Validate RGS event contract
-- Run `scripts/validate-rgs-events.mjs` on sample JSON/JSONL streams.
-- Block on ordering errors (missing `spinStart`, missing `roundResult`, invalid post-result events).
+3. **Validate Book/Index Integrity**
+   - Run `scripts/validate-books-index.mjs`.
+   - Ensure `index.json` links correctly to generated artifacts.
 
-4. Validate frontend contract assumptions
-- Confirm event-driven playback only.
-- Confirm win display and multipliers are read from events.
-- Confirm button/animation synchronization with `roundResult` completion.
+4. **Validate Event Stream**
+   - Run `scripts/validate-rgs-events.mjs`.
+   - Verify deterministic playback and state machine alignment.
+
+5. **Frontend Integration**
 
 5. Run compliance gate
 - Run `scripts/audit-checklist.mjs` using `references/compliance-rules.json`.
