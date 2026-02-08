@@ -2,6 +2,13 @@
 
 Source baseline: https://stake-engine.com/docs and local snapshots `front.md` + `disclaimer.md`.
 
+## Build and Deployment
+
+- Use Vite for build pipeline (`npm create vite@latest`).
+- Set `base: "./"` in `vite.config.ts` (plugins section).
+- Upload `dist/` contents to Stake Engine.
+- Ensure no absolute paths in build artifacts.
+
 ## Asset and runtime policy
 
 - Ship static files only.

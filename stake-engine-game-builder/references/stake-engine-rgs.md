@@ -5,23 +5,28 @@ Source baseline: https://stake-engine.com/docs and local snapshots in `output/co
 ## Required launch URL fields
 
 - `sessionID`: player session token.
-- `lang`: UI language code.
+- `lang`: UI language code (ISO 639-1).
 - `device`: `mobile` or `desktop`.
 - `rgs_url`: runtime RGS base URL (must be dynamic).
+- Example: `index.html?sessionID=...&lang=en&device=desktop&rgs_url=...`
 
 ## Core wallet flow
 
 1. `POST /wallet/authenticate`
-- Call first on game load.
+- **Mandatory first call** on game load.
+- Validates `sessionID`.
 - Read `balance`, `config`, and possibly `round` from response.
 - Use `config.minBet`, `config.maxBet`, `config.stepBet`, `config.betLevels`.
+- **Note:** If not called, subsequent calls fail with `ERR_IS`.
 
 2. `POST /wallet/play`
-- Send `sessionID`, `amount`, and optional mode.
+- Send `sessionID`, `amount` (integer micro-units), and optional `mode`.
 - Debit happens here.
+- Response includes updated `balance` and `round` data.
 
 3. `POST /wallet/end-round`
-- Close round and settle remaining payout path when required by game flow.
+- **Mandatory** if round win > 0 or game logic requires explicit close.
+- Finalizes the bet and updates balance.
 
 4. `POST /wallet/balance`
 - Refresh balance when needed.
