@@ -65,9 +65,4 @@ Load only what is needed:
 - Replay requirements: `references/stake-engine-replay.md`
 - Frontend/compliance checklist: `references/stake-engine-frontend-checklist.md`
 
-Use local docs snapshots for details and examples:
-- `/Users/egorfedorov/Downloads/darkbytes/Engine/output/console/details/rgs.md`
-- `/Users/egorfedorov/Downloads/darkbytes/Engine/output/console/details/wallet.md`
-- `/Users/egorfedorov/Downloads/darkbytes/Engine/output/console/details/replay.md`
-- `/Users/egorfedorov/Downloads/darkbytes/Engine/output/console/details/front.md`
-- `/Users/egorfedorov/Downloads/darkbytes/Engine/output/console/details/disclaimer.md`
+
