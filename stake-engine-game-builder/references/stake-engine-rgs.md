@@ -20,9 +20,13 @@ Source baseline: https://stake-engine.com/docs and local snapshots in `output/co
 - **Note:** If not called, subsequent calls fail with `ERR_IS`.
 
 2. `POST /wallet/play`
-- Send `sessionID`, `amount` (integer micro-units), and optional `mode`.
-- Debit happens here.
-- Response includes updated `balance` and `round` data.
+- Executes a game round.
+- Returns event stream.
+
+3. `GET /bet/replay/{game}/{version}/{mode}/{event}`
+- **Replay API**: Fetches outcome for replay mode.
+- **No Auth Required**: Must work without `sessionID`.
+- Returns: `{ "payoutMultiplier": float, "costMultiplier": float, "state": object }`
 
 3. `POST /wallet/end-round`
 - **Mandatory** if round win > 0 or game logic requires explicit close.

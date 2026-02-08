@@ -2,6 +2,16 @@
 
 Source baseline: https://stake-engine.com/docs and local snapshots `front.md` + `disclaimer.md`.
 
+## Replay Mode Support (Mandatory)
+
+- [ ] Check query params: `replay=true`, `game`, `event`, `rgs_url`.
+- [ ] If `replay=true`:
+  - **Disable** all betting UI (hide spin button, bet selectors).
+  - **Auto-load** the event from `GET {rgs_url}/bet/replay/...`.
+  - **Auto-play** or "Click to Play" (show full animation).
+  - Show "Play Again" at the end.
+  - **No Session** checks (allow public access).
+
 ## Build and Deployment
 
 - Use Vite for build pipeline (`npm create vite@latest`).

@@ -5,6 +5,18 @@
 Event streams must be deterministic, sequential, and frontend-consumable without recomputation.
 See `https://stake-engine.com/docs/math/source-files/events` for the latest event schema.
 
+**Standard Event Structure:**
+```json
+{
+    "index": [int],       // Sequential ID (1, 2, 3...)
+    "type": [str],        // Unique keyword (e.g., "spinStart")
+    "fields": {           // Arbitrary payload
+        "board": [...],
+        "win": 10.0
+    }
+}
+```
+
 ## Required Ordering
 
 Minimum valid round pattern (State Machine alignment):

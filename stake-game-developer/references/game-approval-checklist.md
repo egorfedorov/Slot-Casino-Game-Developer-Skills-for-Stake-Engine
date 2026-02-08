@@ -4,6 +4,9 @@ Reference checklist for testing game readiness for Stake Engine.
 
 ## PreChecks
 
+- [ ] **Restrictions**: Game is strictly stateless (no persistence between rounds).
+- [ ] **Restrictions**: No Jackpots, Gamble features, or Early Cashout.
+- [ ] **Restrictions**: No IP infringement or Stake branding in assets.
 - [ ] Game authenticates with RGS successfully on game launch.
 - [ ] Clicking on the bet button sends a successful play request to RGS.
 - [ ] Game title is unique and does not contain terms such as Megaways, Xways.
@@ -80,12 +83,22 @@ Reference checklist for testing game readiness for Stake Engine.
 - [ ] Values displayed without `$` sign prefix.
 - [ ] Replay window does **not** contain restricted words.
 
-## Replay Support
+## Replay Support (Mandatory)
 
-- [ ] Supports replay URLs; loads and plays desired event.
-- [ ] Supports optional parameters (currency, language, amount).
-- [ ] Allows replaying "event" at the end of replay.
-- [ ] UI clearly displays bet cost, multiplier, and "real" bet cost (e.g., BONUS 1USD, 250USD REAL COST).
+Reference: `https://stake-engine.com/docs/approval-guidelines/game-replay-requirements`
+
+### Integration
+- [ ] **Query Params**: Handles `replay=true`, `game`, `version`, `mode`, `event`, `rgs_url`.
+- [ ] **API Call**: Fetches replay data from `GET {rgs_url}/bet/replay/{game}/{version}/{mode}/{event}`.
+- [ ] **No Session**: Works without player session (publicly shareable URLs).
+
+### UX Workflow
+- [ ] **Auto-Load**: Loads event data automatically without interaction.
+- [ ] **Start**: Displays "Play" button to start replay.
+- [ ] **Playback**: Shows full animation, sounds, and visual effects exactly as original.
+- [ ] **Controls**: Betting UI hidden/disabled. No "Bet" button active.
+- [ ] **End**: Shows "Play Again" button and final results.
+- [ ] **Data Display**: Clearly displays bet cost, multiplier, and "real" bet cost.
 
 ## Final Approval Checklist
 
