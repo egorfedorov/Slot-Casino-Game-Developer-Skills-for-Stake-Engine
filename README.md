@@ -50,14 +50,36 @@ Whether you are designing slot mechanics, optimizing RTP, integrating with the S
 *   **`provider-integration`**: Integrate external/internal providers through stable adapter contracts.
 *   **`studio-scaling`**: Scale game studio delivery systems across teams and pipelines.
 
-## 📦 How to Use
+## 📦 How to Use & Installation
 
-These skills are designed to be used with an AI agent capable of tool invocation. When you need to perform a specific task, simply invoke the corresponding skill tool.
+You can use these skills as "Context Paks" or "Rule Sets" in your favorite AI-powered IDEs.
 
-**Example:**
+### 🔹 Trae & Windsurf
+1.  Navigate to your project root.
+2.  Create a folder named `.trae/skills` or `.windsurf/skills` (depending on your IDE).
+3.  Copy the desired skill folders (e.g., `stake-game-developer`, `game-math-director`) into this directory.
+4.  The IDE will automatically index these skills. You can now invoke them using `@` mention or natural language.
+
+### 🔹 Cursor
+1.  Create a `.cursorrules` file in your project root.
+2.  Copy the content of the `SKILL.md` file from the specific skill you want to use.
+3.  Paste it into `.cursorrules`.
+4.  Alternatively, place the skill markdown files in a `docs/skills/` folder and reference them in your prompt using `@docs/skills/skill-name.md`.
+
+### 🔹 ChatGPT / Claude / LLMs
+1.  Simply copy the content of the `SKILL.md` file (and any referenced files in `references/`).
+2.  Paste it into the chat as "Context" or "System Instruction".
+3.  Tell the AI: *"Use the attached skill instructions to help me with [Task]."*
+
+---
+
+## 🚀 Example Usage
+
+**Prompt:**
 > "I need to design the math for a new slot game with 96% RTP."
 
-The agent will invoke `senior-game-math-engineer` to assist you.
+**Agent Action:**
+The agent will invoke `senior-game-math-engineer` (if installed) or use the provided context to assist you.
 
 ## 🤝 Support & Donations
 
