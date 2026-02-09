@@ -99,6 +99,102 @@ function walkFiles(targetPath, out = []) {
   return out;
 }
 
+function runAudit(rulesPath, targetPath, isSocial, format) {
+  const rules = JSON.parse(fs.readFileSync(rulesPath, "utf-8"));
+  const files = walkFiles(targetPath);
+  const issues = [];
+
+  for (const file of files) {
+    const content = fs.readFileSync(file, "utf-8");
+    const lowerContent = content.toLowerCase();
+
+    // Check Restricted Terms
+    if (rules.restrictedTerms) {
+      for (const term of rules.restrictedTerms) {
+        if (term.socialOnly && !isSocial) continue;
+        
+        const phrase = term.phrase.toLowerCase();
+        if (lowerContent.includes(phrase)) {
+          // Simple check: find line number
+          const lines = content.split("\n");
+          lines.forEach((line, idx) => {
+            if (line.toLowerCase().includes(phrase)) {
+              issues.push({
+                file: path.relative(process.cwd(), file),
+                line: idx + 1,
+                type: "RESTRICTED_TERM",
+                message: `Found prohibited term "${term.phrase}". Replacement: "${term.replacement}"`,
+                context: line.trim().substring(0, 100)
+              });
+            }
+          });
+        }
+      }
+    }
+
+    // Check Required Phrases (only if not social-specific or logic allows)
+    if (rules.requiredPhrases) {
+      for (const req of rules.requiredPhrases) {
+        if (!lowerContent.includes(req.phrase.toLowerCase())) {
+          // Check if this file type is relevant for the required phrase
+          // E.g. disclaimer usually in specific files, but for now we warn if MISSING from project?
+          // Actually, required phrases are usually "must exist SOMEWHERE". 
+          // Checking every file for existence is wrong. 
+          // We should check if it exists in AT LEAST ONE file in the target.
+        }
+      }
+    }
+  }
+
+  // Global Required Phrase Check
+  if (rules.requiredPhrases) {
+    for (const req of rules.requiredPhrases) {
+      let found = false;
+      for (const file of files) {
+        const content = fs.readFileSync(file, "utf-8").toLowerCase();
+        if (content.includes(req.phrase.toLowerCase())) {
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        issues.push({
+          file: "PROJECT_WIDE",
+          line: 0,
+          type: "MISSING_REQUIRED",
+          message: `Missing required phrase: "${req.phrase}"`,
+          context: req.description
+        });
+      }
+    }
+  }
+
+  if (format === "json") {
+    console.log(JSON.stringify(issues, null, 2));
+  } else {
+    if (issues.length === 0) {
+      console.log("✅ No compliance issues found.");
+    } else {
+      console.log(`❌ Found ${issues.length} issues:`);
+      issues.forEach(issue => {
+        console.log(`\n[${issue.type}] ${issue.file}:${issue.line}`);
+        console.log(`   ${issue.message}`);
+        if (issue.context) console.log(`   Context: "${issue.context}"`);
+      });
+      process.exit(1);
+    }
+  }
+}
+
+try {
+  const args = parseArgs(process.argv.slice(2));
+  runAudit(args.rules, args.target, args.social, args.format);
+} catch (err) {
+  console.error(`Error: ${err.message}`);
+  printUsage();
+  process.exit(1);
+}
+
 function toLineNumber(text, index) {
   if (index <= 0) {
     return 1;

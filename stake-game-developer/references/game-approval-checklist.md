@@ -71,6 +71,22 @@ Reference checklist for testing game readiness for Stake Engine.
 
 ## Jurisdiction Requirements (Stake.US Social)
 
+Reference: `https://stake-engine.com/docs/approval-guidelines/jurisdiction-requirements`
+
+### Strict Terminology Checks
+**Prohibited Terms (Must be replaced for Social Mode):**
+- **Bet** -> Play
+- **Win / Payout** -> Win / Won (Avoid "Payout")
+- **Cash / Money** -> Coins
+- **Buy / Purchase** -> Play / Instantly Triggered
+- **Deposit / Withdraw** -> Get Coins / Redeem
+- **Gamble / Wager** -> Play
+- **Stake** -> Play Amount
+- **Credit / Fund** -> Balance
+- **Currency** -> Token
+- **Cost of** -> Can be played for
+
+### UI Checks
 - [ ] Compliant with required translations for social game?
 - [ ] Bet button does **not** say "Bet".
 - [ ] Game Info does **not** contain restricted words.
