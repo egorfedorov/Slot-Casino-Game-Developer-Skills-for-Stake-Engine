@@ -1,0 +1,4 @@
+interface:
+  display_name: "CSS Motion Designer"
+  short_description: "Design CSS motion systems for casino UI"
+  default_prompt: "Use $css-motion-designer to design CSS-only motion patterns, recipes, and integration rules for casino games."
