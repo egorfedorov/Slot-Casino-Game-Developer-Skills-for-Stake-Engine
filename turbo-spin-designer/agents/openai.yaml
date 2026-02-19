@@ -1,0 +1,4 @@
+interface:
+  display_name: "Turbo Spin Designer"
+  short_description: "Design turbo and quick spin UX rules"
+  default_prompt: "Use $turbo-spin-designer to define spin speed modes, stop behavior, and UI rules for fast spins."

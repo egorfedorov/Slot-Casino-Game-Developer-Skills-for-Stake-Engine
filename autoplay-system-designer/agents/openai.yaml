@@ -1,0 +1,4 @@
+interface:
+  display_name: "Autoplay System Designer"
+  short_description: "Design auto-play UX and stop rules"
+  default_prompt: "Use $autoplay-system-designer to define auto-play behavior, stop conditions, confirmations, and UI mapping."

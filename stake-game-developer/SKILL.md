@@ -1,6 +1,6 @@
 ---
 name: stake-game-developer
-description: End-to-end Stake game development workflow for math, RGS contract, frontend playback, and compliance gating. Use when building or updating Stake games, defining game modes and RTP targets, validating generated books/index metadata, validating event streams, integrating frontend event playback, or preparing publication checks including social-language and jurisdiction requirements.
+description: End-to-end Stake game development workflow for math, RGS contract, frontend playback, and compliance gating. Use when building or updating Stake games, defining game modes and RTP targets, validating generated books/index metadata, validating event streams, integrating frontend event playback, implementing RGS communication and replay mode, or preparing publication checks including social-language and jurisdiction requirements.
 ---
 
 # Stake Game Developer
@@ -37,7 +37,10 @@ Treat non-zero exits as hard blockers for release readiness.
 - `references/rgs-event-contract.md`: Required event order and field expectations.
 - `references/frontend-integration.md`: Deterministic player integration patterns.40→ - `references/compliance-checklist.md`: Stake checklist and jurisdiction requirements.
 41→ - `references/compliance-rules.json`: Machine-readable restricted phrase and required-phrase checks.
-42→ - `references/game-approval-checklist.md`: Comprehensive QA/Release sign-off gates.
+- `references/game-approval-checklist.md`: Comprehensive QA/Release sign-off gates.
+- `references/stake-engine-rgs.md`: Stake Engine RGS API and wallet flow details.
+- `references/stake-engine-replay.md`: Stake Engine replay mode requirements.
+- `references/stake-engine-frontend-checklist.md`: Frontend compliance checklist.
 43→
 44→ ## Execution Rules
 - Keep frontend stateless: never re-calculate payouts if events already provide them.

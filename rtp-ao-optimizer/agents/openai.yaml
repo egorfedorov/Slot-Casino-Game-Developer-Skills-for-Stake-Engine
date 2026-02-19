@@ -1,4 +1,0 @@
-interface:
-  display_name: "RTP AO Optimizer"
-  short_description: "Optimize RTP and AO targets with guardrails"
-  default_prompt: "Use $rtp-ao-optimizer to tune RTP/AO targets with simulation evidence, guardrails, and sign-off thresholds."
