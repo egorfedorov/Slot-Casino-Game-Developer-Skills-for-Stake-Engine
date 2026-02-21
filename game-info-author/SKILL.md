@@ -22,7 +22,7 @@ Use this skill to produce consistent, studio-grade “Game Info” content for s
 - Required for “Выплаты за символы”.
 
 4. Specify special symbols.
-- Wilds, Scatters, Bonus, Multipliers and their behaviors.
+- Wilds, Scatters, Bonus, Multipliers and their behaviors. 
 - Required for “Специальные символы”.
 
 5. Describe win methods.

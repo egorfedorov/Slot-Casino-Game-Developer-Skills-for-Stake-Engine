@@ -41,8 +41,14 @@ Treat non-zero exits as hard blockers for release readiness.
 - `references/stake-engine-rgs.md`: Stake Engine RGS API and wallet flow details.
 - `references/stake-engine-replay.md`: Stake Engine replay mode requirements.
 - `references/stake-engine-frontend-checklist.md`: Frontend compliance checklist.
+- `references/currency-rules.md`: **CRITICAL** formulas for API (x1e6) vs Book (x100) scaling.
 43→
 44→ ## Execution Rules
+
+- **Strict Currency/Math Scaling:**
+  - **API (Wallet/RGS):** Use `1,000,000` scale. `display = api / 1e6`, `api = display * 1e6`.
+  - **Books (Math/Events):** Use `100` scale. `multiplier = bookVal / 100`, `win = bet * (bookVal / 100)`.
+  - *Never* mix these scales. See `references/currency-rules.md`.
 - Keep frontend stateless: never re-calculate payouts if events already provide them.
 - Validate data contracts before tuning UX or animation details.
 - Enforce compliance checks by default (`--social true`) unless user explicitly says otherwise.
